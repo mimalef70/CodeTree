@@ -5,15 +5,6 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 
-# Output files
-code_structure_analysis.txt
-*.log
-
-# Environment
-.env
-.env.local
-.env.*
-
 # IDE
 .idea/
 .vscode/
@@ -26,10 +17,22 @@ code_structure_analysis.txt
 Thumbs.db
 desktop.ini
 
-# Test coverage
-coverage/
+# Project specific
+code_structure_analysis.txt
+*.log
+.codetreerc
+codetree.config.json
 
-# Temporary files
+# Test
+coverage/
+.nyc_output/
+
+# Build
+dist/
+build/
+
+# Temporary
 tmp/
 temp/
-*.tmp
+.tmp/
+.temp/

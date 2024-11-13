@@ -1,7 +1,7 @@
 {
   "name": "codetree-cli",
   "version": "1.0.0",
-  "description": "A powerful CLI tool for generating code structure visualization",
+  "description": "A powerful CLI tool for generating code structure visualization with smart configuration",
   "main": "codetree.js",
   "bin": {
     "codetree": "./codetree.js"
@@ -10,7 +10,8 @@
     "start": "node codetree.js",
     "lint": "eslint .",
     "test": "jest",
-    "prepare": "chmod +x codetree.js"
+    "prepare": "chmod +x codetree.js",
+    "format": "prettier --write ."
   },
   "keywords": [
     "code",
@@ -21,7 +22,10 @@
     "analysis",
     "cli",
     "development",
-    "documentation"
+    "documentation",
+    "file-system",
+    "source-code",
+    "project-structure"
   ],
   "author": "[Your Name] <your.email@example.com>",
   "license": "MIT",
@@ -36,9 +40,22 @@
     "url": "https://github.com/yourusername/codetree/issues"
   },
   "homepage": "https://github.com/yourusername/codetree#readme",
-  "preferGlobal": true,
+  "dependencies": {
+    "glob": "^8.0.0",
+    "minimatch": "^5.0.0"
+  },
   "devDependencies": {
     "eslint": "^8.0.0",
-    "jest": "^29.0.0"
-  }
+    "jest": "^29.0.0",
+    "prettier": "^2.0.0"
+  },
+  "files": [
+    "src/",
+    "codetree.js",
+    "install.sh",
+    "uninstall.sh",
+    "README.md",
+    "LICENSE"
+  ],
+  "preferGlobal": true
 }
