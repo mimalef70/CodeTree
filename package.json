@@ -1,0 +1,31 @@
+{
+  "name": "codetree",
+  "version": "1.0.0",
+  "description": "A powerful tool for generating code structure visualization",
+  "main": "codetree.js",
+  "bin": {
+    "codetree": "./codetree.js"
+  },
+  "scripts": {
+    "start": "node codetree.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "code",
+    "tree",
+    "visualization",
+    "directory",
+    "structure",
+    "analysis"
+  ],
+  "author": "[Your Name]",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "preferGlobal": true
+}
