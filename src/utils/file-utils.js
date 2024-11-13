@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+const minimatch = require('minimatch'); 
 
 /**
  * Check if a file is a text file

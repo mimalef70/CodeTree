@@ -1,27 +1,55 @@
 # Development files
-test/
-docs/
+.git*
+.eslint*
+.prettier*
+.editorconfig
+.vscode
+.idea
+*.log
+
+# Test files
+__tests__
+test
+tests
+coverage
 *.test.js
 *.spec.js
 
-# Git files
-.git
+# Documentation
+docs/
+*.md
+!README.md
+
+# Source control
+.git/
 .gitignore
+.gitattributes
 
-# CI/CD
-.github/
-.travis.yml
-.gitlab-ci.yml
+# Build tools
+webpack.config.js
+rollup.config.js
+babel.config.js
 
-# Project files
-README.md
-CHANGELOG.md
-LICENSE
+# Environment
+.env*
+.npmrc
+.yarnrc
 
-# IDE
-.idea/
-.vscode/
-
-# Misc
+# OS generated files
 .DS_Store
-*.log
+Thumbs.db
+
+# Project specific
+examples/
+src/
+!dist/
+*.map
+
+# IDE specific
+*.sublime-*
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/

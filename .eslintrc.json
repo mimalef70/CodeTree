@@ -1,0 +1,44 @@
+{
+    "env": {
+      "node": true,
+      "es2020": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": ["node", "prettier"],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "node/exports-style": ["error", "module.exports"],
+      "node/file-extension-in-import": ["error", "always"],
+      "node/prefer-global/buffer": ["error", "always"],
+      "node/prefer-global/console": ["error", "always"],
+      "node/prefer-global/process": ["error", "always"],
+      "node/no-unsupported-features/es-syntax": [
+        "error",
+        {
+          "version": ">=12.0.0",
+          "ignores": []
+        }
+      ],
+      "no-console": ["error", { "allow": ["log", "warn", "error", "debug"] }],
+      "curly": ["error", "all"],
+      "eqeqeq": ["error", "always", { "null": "ignore" }],
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "no-var": "error",
+      "prefer-const": "error",
+      "arrow-body-style": ["error", "as-needed"],
+      "arrow-parens": ["error", "as-needed"],
+      "arrow-spacing": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-template": "error",
+      "quotes": ["error", "single", { "avoidEscape": true }],
+      "semi": ["error", "always"]
+    }
+  }

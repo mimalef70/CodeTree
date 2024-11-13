@@ -31,12 +31,19 @@ echo -e "${BLUE}Installing CodeTree...${NC}"
 
 # Create the installation directory
 INSTALL_DIR="$HOME/.codetree"
-mkdir -p "$INSTALL_DIR"
+mkdir -p "$INSTALL_DIR/src/utils"
 
 # Copy files
 echo -e "${BLUE}Copying files...${NC}"
+# Copy main files
 cp codetree.js "$INSTALL_DIR/"
 cp package.json "$INSTALL_DIR/"
+
+# Copy src directory
+cp src/config-loader.js "$INSTALL_DIR/src/"
+cp src/default-config.js "$INSTALL_DIR/src/"
+cp src/utils/file-utils.js "$INSTALL_DIR/src/utils/"
+cp src/utils/format-utils.js "$INSTALL_DIR/src/utils/"
 
 # Create the executable script
 echo -e "${BLUE}Creating executable...${NC}"
