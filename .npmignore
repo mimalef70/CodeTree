@@ -1,0 +1,27 @@
+# Development files
+test/
+docs/
+*.test.js
+*.spec.js
+
+# Git files
+.git
+.gitignore
+
+# CI/CD
+.github/
+.travis.yml
+.gitlab-ci.yml
+
+# Project files
+README.md
+CHANGELOG.md
+LICENSE
+
+# IDE
+.idea/
+.vscode/
+
+# Misc
+.DS_Store
+*.log
