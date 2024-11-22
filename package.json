@@ -1,5 +1,5 @@
 {
-  "name": "codetree",
+  "name": "@mimalef70/codetree",
   "version": "1.0.1",
   "description": "A tool to pack repository contents to single file for AI consumption",
   "main": "./lib/index.js",
