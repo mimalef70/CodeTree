@@ -1,38 +1,33 @@
-# Dependencies
+# Dependency directories
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
 
-# IDE
-.idea/
-.vscode/
-*.sublime-*
-*.swp
-*.swo
+# Build output
+lib/
 
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Project specific
-code_structure_analysis.txt
+# Logs
 *.log
-.codetreerc
-codetree.config.json
 
-# Test
-coverage/
-.nyc_output/
+# OS generated files
+.DS_Store
 
-# Build
-dist/
-build/
+# Editor directories and files
+.vscode/
+.idea/
 
-# Temporary
-tmp/
-temp/
-.tmp/
-.temp/
+# Temporary files
+*.tmp
+*.temp
+
+# Codetree output
+Codetree.txt
+Codetree.xml
+Codetree.md
+
+# ESLint cache
+.eslintcache
+
+# yarn
+.yarn/
+
+# biome
+.biome/

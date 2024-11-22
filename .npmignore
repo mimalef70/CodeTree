@@ -1,55 +1,59 @@
-# Development files
-.git*
-.eslint*
-.prettier*
+# Source files
+src/
+
+# Configuration files
+tsconfig.json
+tsconfig.build.json
+.eslintrc.js
+eslint.config.mjs
+prettier.config.mjs
+vite.config.mts
+biome.json
+
+# Git files
+.gitignore
+.git
+
+# CI files
+.github/
+
+# yarn files
+.yarn
+
+# ESLint files
+.eslintcache
+
+# Config files
 .editorconfig
-.vscode
-.idea
+.node-version
+.tool-versions
+codetree.config.js
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
 *.log
 
-# Test files
-__tests__
-test
-tests
-coverage
-*.test.js
-*.spec.js
+# CodeTree output
+codetree.txt
 
-# Documentation
+# Development scripts
+scripts/
+
+# Documentation files (except README and LICENSE)
 docs/
-*.md
-!README.md
+CONTRIBUTING.md
+CHANGELOG.md
 
-# Source control
-.git/
-.gitignore
-.gitattributes
-
-# Build tools
-webpack.config.js
-rollup.config.js
-babel.config.js
-
-# Environment
-.env*
-.npmrc
-.yarnrc
+# Temporary files
+*.tmp
+*.temp
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# Project specific
-examples/
-src/
-!dist/
-*.map
-
-# IDE specific
-*.sublime-*
-*.swp
-*.swo
-
-# Temporary files
-tmp/
-temp/
+# biome
+.biome/

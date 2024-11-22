@@ -1,66 +1,79 @@
 {
-  "name": "codetree-cli",
-  "version": "1.0.0",
-  "description": "A powerful CLI tool for generating code structure visualization with smart configuration",
-  "main": "codetree.js",
-  "bin": {
-    "codetree": "./codetree.js"
+  "name": "codetree",
+  "version": "1.0.1",
+  "description": "A tool to pack repository contents to single file for AI consumption",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts"
+    }
   },
+  "bin": "./bin/codetree.cjs",
   "scripts": {
-    "start": "node codetree.js",
-    "lint": "eslint .",
-    "test": "jest",
-    "prepare": "chmod +x codetree.js",
-    "format": "prettier --write .",
-    "prepublishOnly": "npm test && npm run lint",
-    "postversion": "git push && git push --tags"
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc -p tsconfig.build.json --sourceMap --declaration",
+    "lint": "npm run lint-biome && npm run lint-ts",
+    "lint-biome": "biome check --write",
+    "lint-ts": "tsc --noEmit",
+    "cli-run": "npm run build && node --trace-warnings bin/codetree.cjs",
+    "npm-publish": "npm run lint && npm run build && npm publish",
+    "npm-release-patch": "npm version patch && npm run npm-publish",
+    "npm-release-minor": "npm version minor && npm run npm-publish",
+    "npm-release-prerelease": "npm version prerelease && npm run npm-publish"
   },
   "keywords": [
-    "code",
-    "tree",
-    "visualization",
-    "directory",
-    "structure",
-    "analysis",
-    "cli",
-    "development",
-    "documentation",
-    "file-system",
+    "repository",
+    "generative-ai",
+    "ai",
+    "llm",
     "source-code",
-    "project-structure"
+    "code-analysis",
+    "codebase-packer",
+    "development-tool",
+    "ai-assistant",
+    "code-review"
   ],
-  "author": "Mostafa Alahyari <mostafa.a.aut@gmail.com>",
-  "license": "MIT",
-  "engines": {
-    "node": ">=12.0.0"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mimalef70/codetree.git"
+    "url": "git://github.com/mimalef70/CodeTree.git"
   },
   "bugs": {
-    "url": "https://github.com/mimalef70/codetree/issues"
+    "url": "https://github.com/mimalef70/CodeTree/issues"
   },
-  "homepage": "https://github.com/mimalef70/codetree#readme",
+  "author": "Mostafa Alahyari <mostafa.a.aut@gmail.com>",
+  "homepage": "https://github.com/mimalef70/CodeTree",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
   "dependencies": {
-    "glob": "^8.0.0",
-    "minimatch": "^5.0.0"
+    "@clack/prompts": "^0.8.1",
+    "cli-spinners": "^2.9.2",
+    "clipboardy": "^4.0.0",
+    "commander": "^12.1.0",
+    "globby": "^14.0.2",
+    "handlebars": "^4.7.8",
+    "iconv-lite": "^0.6.3",
+    "istextorbinary": "^9.5.0",
+    "jschardet": "^3.1.4",
+    "log-update": "^6.1.0",
+    "p-map": "^7.0.2",
+    "picocolors": "^1.1.1",
+    "strip-comments": "^2.0.1",
+    "tiktoken": "^1.0.17",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^29.0.0",
-    "prettier": "^2.0.0"
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.9.1",
+    "@types/strip-comments": "^2.0.4",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3"
   },
-  "files": [
-    "src/",
-    "codetree.js",
-    "install.sh",
-    "uninstall.sh",
-    "README.md",
-    "LICENSE"
-  ],
-  "preferGlobal": true
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.22"
+  }
 }
