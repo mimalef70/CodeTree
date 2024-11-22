@@ -1,6 +1,3 @@
-این یک نمونه بهبود یافته از README.md است:
-
-```markdown
 # 🌳 CodeTree
 > A powerful CLI tool that packs your entire repository into a single, AI-friendly file for seamless integration with Large Language Models (LLMs) like Claude, ChatGPT, and Gemini.
 
@@ -322,4 +319,3 @@ Made with ❤️ by <a href="https://github.com/mimalef70">Mostafa Alahyari</a>
 <p align="center">
 If you find CodeTree helpful, please consider giving it a ⭐️ on <a href="https://github.com/mimalef70/codetree">GitHub</a>
 </p>
-```
